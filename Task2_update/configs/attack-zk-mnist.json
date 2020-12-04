@@ -1,0 +1,59 @@
+{
+ "num_attacks": 12,
+ "attacks": {
+      "fgsm": [ 
+      {
+      "description": "fgsm_eps0.05",
+      "eps": 0.05
+      }, 
+      {
+      "description": "fgsm_eps0.1",
+      "eps": 0.1
+      },
+      {
+      "description": "fgsm_eps0.15",
+      "eps": 0.15
+      },
+      {
+      "description": "fgsm_eps0.2",
+      "eps": 0.2
+      }
+      ], 
+      "pgd": [ 
+      {
+      "description": "pgd_eps0.05",
+      "eps": 0.05
+      },
+      {
+      "description": "pgd_eps0.1",
+      "eps": 0.1
+      },
+      {
+      "description": "pgd_eps0.15",
+      "eps": 0.15
+      },
+      {
+      "description": "pgd_eps0.2",
+      "eps": 0.2
+      }
+      ],
+      "deepfool": [ 
+      {
+      "description": "deepfool_eps0.01",
+      "eps": 0.01
+      },
+      {
+      "description": "deepfool_eps0.03",
+      "eps": 0.03
+      },
+      {
+      "description": "deepfool_eps0.05",
+      "eps": 0.05
+      },
+      {
+      "description": "deepfool_eps0.1",
+      "eps": 0.1
+      }
+      ]
+      }
+ }
