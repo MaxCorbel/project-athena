@@ -1,0 +1,33 @@
+{
+ "dir": "../learning_based_strategy/results/",
+ "files_by_ae": {
+
+          "fgsm":
+          "fgsm_results.json",
+
+          "bim_ord2":
+          "bim_ord2_results.json",
+
+          "bim_ordinf":
+          "bim_ordinf_results.json",
+
+          "cw_l2":
+          "cw_l2_results.json",
+
+          "deepfool_l2":
+          "deepfool_l2_results.json",
+
+          "jsma":
+          "jsma_results.json",
+
+          "pgd":
+          "pgd_results.json",
+
+          "mim":
+          "mim_results.json",
+
+          "onepixel":
+          "onepixel_results.json"
+     }
+ }
+
