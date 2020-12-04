@@ -1,7 +1,0 @@
-{
-  "num_attacks": 1,
-  "configs0": {
-    "attack": "hop-skip-jump",
-    "description": "HSJ_normal"
-  }
-}

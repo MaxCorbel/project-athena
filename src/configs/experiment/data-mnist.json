@@ -1,5 +1,10 @@
 {
     "dir": "../../data/",
+    "training_dir": "../learning_based_strategy/training_data/",
+    "training_samples_file": "raws_training.npy",
+    "training_labels_file": "training_labels.npy",
+    "validation_samples_file": "raws_validation.npy",
+    "validation_labels_file": "validation_labels.npy",
     "bs_file": "test_BS-mnist-clean.npy",
     "label_file": "test_Label-mnist-clean.npy",
     "ae_files": [

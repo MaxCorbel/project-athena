@@ -159,15 +159,20 @@ def subsampling(data, labels, num_classes, ratio=0.1, filepath=None, filename=No
     training_labels = np.asarray([labels[i] for i in range(pool_size) if i not in sample_ids])
 
     if filepath is not None:
-        # save the subsamples
-        #rand_idx = time.monotonic()
-        file = os.path.join(filepath, '{}_test_samples.npy'.format(filename))#, rand_idx))
-        np.save(file=file, arr=test_samples)
-        file = os.path.join(filepath, '{}_test_labels.npy'.format(filename))#, rand_idx))
+        # save the labels
+        file = os.path.join(filepath, 'validation{}'.format(filename))
         np.save(file=file, arr=test_labels)
-        file = os.path.join(filepath, '{}_training_samples.npy'.format(filename))#, rand_idx))
-        np.save(file=file, arr=training_samples)
-        file = os.path.join(filepath, '{}_training_labels.npy'.format(filename))#, rand_idx))
+        file = os.path.join(filepath, 'training{}'.format(filename))
         np.save(file=file, arr=training_labels)
 
-    #return subsamples, sublabels
+    #return samples to generate raws
+    return training_samples, test_samples, training_labels
+
+#Returns list corresponing to label value of each identification (0,9)
+def get_indv_correct_labels(labels):
+    arr = []
+    for label in labels:
+        temp = [0,0,0,0,0,0,0,0,0,0]
+        temp[label] = 1
+        arr.append(temp)
+    return np.array(arr)

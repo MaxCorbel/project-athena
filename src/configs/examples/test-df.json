@@ -1,8 +1,0 @@
-{
-  "num_attacks": 1,
-  "configs0": {
-    "attack": "deepfool",
-    "description": "DF_eps0.2",
-    "eps": 0.2
-  }
-}

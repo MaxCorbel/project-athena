@@ -9,14 +9,13 @@ import logging
 import numpy as np
 from enum import Enum
 import random
-#import nn
 import keras
 
 from art.classifiers.classifier import Classifier, ClassifierNeuralNetwork, ClassifierGradients
 
 logger = logging.getLogger(__name__)
 
-learning_strategy = 'models/learning-strategy-nn.h5'
+learning_strategy = 'learning-strategy-nn.h5'
 
 class Ensemble(ClassifierNeuralNetwork, ClassifierGradients, Classifier):
     def __init__(self, classifiers, strategy, classifier_weights=None,
@@ -72,13 +71,13 @@ class Ensemble(ClassifierNeuralNetwork, ClassifierGradients, Classifier):
             classifier_weights = np.ones(self._nb_classifiers) / self._nb_classifiers
         self._classifier_weights = classifier_weights
 
-        if strategy not in ENSEMBLE_STRATEGY.available_names() or strategy not in ENSEMBLE_STRATEGY.available_values():
-            strategy = ENSEMBLE_STRATEGY.LEARNING.name
+        #if strategy not in ENSEMBLE_STRATEGY.available_names() or strategy not in ENSEMBLE_STRATEGY.available_values():
+            #strategy = ENSEMBLE_STRATEGY.LEARNING.name
         self._strategy = strategy
-
         self._learning_phase = None
 
     def predict(self, x, batch_size=128, raw=False, **kwargs):
+
         raw_predictions = np.array(
             [self._classifier_weights[i] * self._classifiers[i].predict(x) for i in range(self._nb_classifiers)]
         )
@@ -98,9 +97,10 @@ class Ensemble(ClassifierNeuralNetwork, ClassifierGradients, Classifier):
         if self._strategy == ENSEMBLE_STRATEGY.LEARNING.name or self._strategy == ENSEMBLE_STRATEGY.LEARNING.value:
             model = keras.models.load_model(learning_strategy)
             raw_predictions = np.transpose(raw_predictions, (1,0,2))
-            raw_predictions = raw_predictions.reshape((1000,150))
+            num_wds = np.ma.size(raw_predictions,axis=1)
+            raw_predictions = raw_predictions.reshape((len(raw_predictions),num_wds * 10))
             ensemble_preds = model.predict(raw_predictions)
-            return np.argmax(ensemble_preds, axis=1)
+            return ensemble_preds
         if self._strategy == ENSEMBLE_STRATEGY.RD.name or self._strategy == ENSEMBLE_STRATEGY.RD.value:
             id = random.choice(self._nb_classifiers)
             ensemble_preds =  raw_predictions[id]

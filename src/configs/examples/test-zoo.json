@@ -1,9 +1,0 @@
-{
-  "num_attacks": 1,
-  "configs0": {
-    "attack": "zoo",
-    "description": "ZOO_eps0.3",
-    "confidence": 0.0,
-    "lr": 0.1
-  }
-}

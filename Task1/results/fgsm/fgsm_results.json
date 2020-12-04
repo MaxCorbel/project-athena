@@ -1,0 +1,1 @@
+{"fgsm_eps0.05": {"UM": 0.087, "Ensemble": 0.018, "Baseline": 0.0215}, "fgsm_eps0.1": {"UM": 0.258, "Ensemble": 0.027, "Baseline": 0.0355}, "fgsm_eps0.15": {"UM": 0.5365, "Ensemble": 0.0385, "Baseline": 0.0515}, "fgsm_eps0.2": {"UM": 0.7385, "Ensemble": 0.092, "Baseline": 0.0755}}

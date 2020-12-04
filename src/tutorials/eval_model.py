@@ -3,9 +3,6 @@ A sample to evaluate model on dataset
 @author: Ying Meng (y(dot)meng201011(at)gmail(dot)com)
 """
 
-import sys
-sys.path.append("../")
-
 import argparse
 import numpy as np
 import os

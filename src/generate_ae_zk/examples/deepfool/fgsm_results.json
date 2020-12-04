@@ -1,0 +1,1 @@
+{"deepfool_eps0.01": {"UM": 0.611, "Ensemble": 0.031, "Baseline": 0.0345}, "deepfool_eps0.03": {"UM": 0.611, "Ensemble": 0.031, "Baseline": 0.0345}, "deepfool_eps0.05": {"UM": 0.611, "Ensemble": 0.031, "Baseline": 0.0345}, "deepfool_eps0.1": {"UM": 0.611, "Ensemble": 0.031, "Baseline": 0.0345}}
