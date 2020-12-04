@@ -1,0 +1,1 @@
+{"pgd_eps0.05": {"UM": 0.135, "Ensemble": 0.018, "Baseline": 0.0235}, "pgd_eps0.1": {"UM": 0.682, "Ensemble": 0.027, "Baseline": 0.036}, "pgd_eps0.15": {"UM": 0.9565, "Ensemble": 0.0425, "Baseline": 0.0515}, "pgd_eps0.2": {"UM": 0.9955, "Ensemble": 0.072, "Baseline": 0.072}}
